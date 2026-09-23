@@ -1,1 +1,1 @@
-export const baseUrl = "https://fastapi-housing-141g.onrender.com";
+export const baseUrl = "https://fastapi-housing-r41g.onrender.com";
