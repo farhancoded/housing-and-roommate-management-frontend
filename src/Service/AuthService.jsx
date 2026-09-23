@@ -31,7 +31,6 @@ export const loginUser = async (credentials) => {
 
     const data = await response.json();
 
-    console.log("Login response:", data);
 
     if (!response.ok) {
         if (Array.isArray(data?.detail)) {

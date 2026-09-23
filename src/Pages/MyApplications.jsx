@@ -26,9 +26,6 @@ const MyApplications = () => {
             );
 
 
-            // Backend may return an array directly
-            // or { data: [...] }
-
             const applicationData =
                 Array.isArray(data)
                     ? data
@@ -82,8 +79,6 @@ const MyApplications = () => {
             <div className="max-w-6xl mx-auto">
 
 
-                {/* Header */}
-
                 <div className="mb-8">
 
                     <h1 className="text-4xl font-bold">
@@ -96,8 +91,6 @@ const MyApplications = () => {
 
                 </div>
 
-
-                {/* No applications */}
 
                 {applications.length === 0 && (
 
@@ -124,7 +117,6 @@ const MyApplications = () => {
                 )}
 
 
-                {/* Applications */}
 
                 {applications.length > 0 && (
 

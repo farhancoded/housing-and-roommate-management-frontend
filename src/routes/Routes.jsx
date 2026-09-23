@@ -1,8 +1,6 @@
-import React from "react";
+
 import { createBrowserRouter } from "react-router";
-
 import Root from "../Layout/Root";
-
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import ForgotPassword from "../Pages/ForgotPassword";

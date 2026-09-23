@@ -32,7 +32,6 @@ const Register = () => {
 
             const data = await registerUser(formData);
 
-            console.log("Register response:", data);
 
             toast.success("Account created successfully!");
 

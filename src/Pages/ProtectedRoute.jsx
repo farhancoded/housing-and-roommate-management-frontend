@@ -28,7 +28,7 @@ const ProtectedRoute = ({ allowedRoles }) => {
                 atob(token.split(".")[1])
             );
 
-            console.log("JWT payload:", payload);
+            
 
             role =
                 payload.role ||
@@ -47,13 +47,6 @@ const ProtectedRoute = ({ allowedRoles }) => {
 
     role = role?.toLowerCase();
 
-    console.log("========== PROTECTED ROUTE ==========");
-    console.log("Token:", !!token);
-    console.log("User:", user);
-    console.log("Role:", role);
-    console.log("Allowed roles:", allowedRoles);
-    console.log("====================================");
-
 
     if (!token) {
         return <Navigate to="/login" replace />;
@@ -62,14 +55,9 @@ const ProtectedRoute = ({ allowedRoles }) => {
  
     if (!allowedRoles.includes(role)) {
 
-        console.log(
-            "❌ ACCESS DENIED - redirecting to home"
-        );
-
         return <Navigate to="/" replace />;
     }
 
-    console.log("✅ ACCESS GRANTED");
 
     return <Outlet />;
 };

@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
 import { getListingById } from "../Service/ListingService";
 import { applyForRoom } from "../Service/UserService";
-
 import toast from "react-hot-toast";
 
 const HouseDetails = () => {
     const { id } = useParams();
-
     const [house, setHouse] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [showApply, setShowApply] = useState(false);
-
     const [message, setMessage] = useState(
-        "I am interested in this room."
-    );
+        "I am interested in this room.");
 
     const [submitting, setSubmitting] = useState(false);
     const [success, setSuccess] = useState("");

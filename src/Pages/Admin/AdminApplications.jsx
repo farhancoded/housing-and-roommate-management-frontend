@@ -15,7 +15,7 @@ const AdminApplications = () => {
 
             const data = await getAllApplications();
 
-            console.log("Applications:", data);
+            
 
             setApplications(
                 data?.data || data || []
